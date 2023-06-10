@@ -4,24 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+  <style>
+    /* Add your custom styles here if needed */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    .hero-section {
+      padding-top: 5rem; /* Adjust the padding as needed */
+    }
+  </style>
 </head>
 <body>
-    <nav class="bg-text">
+    <nav class="bg-white navbar">
         <div class="container mx-auto px-4">
           <div class="flex items-center justify-between py-4">
             <div>
-              <a href="#" class="text-white font-bold text-xl">Your Logo</a>
+              <a href="#" class="text-black font-bold text-xl">Your Logo</a>
             </div>
             <div class="hidden md:flex">
-              <a href="#" class="text-gray-300 hover:text-white px-4 py-2">Home</a>
-              <a href="#" class="text-gray-300 hover:text-white px-4 py-2">About me</a>
-              <a href="#" class="text-gray-300 hover:text-white px-4 py-2">Works</a>
-              <a href="#" class="text-gray-300 hover:text-white px-4 py-2">Contact</a>
-              <a href="#" class="text-gray-300 hover:text-white px-4 py-2">Buy me Coffee!</a>
+              <a href="#" class="text-black hover:text-white px-4 py-2">Home</a>
+              <a href="#" class="text-black hover:text-white px-4 py-2">About me</a>
+              <a href="#" class="text-black hover:text-white px-4 py-2">Works</a>
+              <a href="#" class="text-black hover:text-white px-4 py-2">Contact</a>
+              <a href="#" class="text-black hover:text-white px-4 py-2">Buy me Coffee!</a>
             </div>
             <div class="md:hidden">
               <!-- Hamburger menu icon -->
-              <button type="button" class="text-gray-300 hover:text-white focus:outline-none" id="mobile-menu-button">
+              <button type="button" class="text-black hover:text-gray-800 focus:outline-none" id="mobile-menu-button">
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -30,28 +44,40 @@
           </div>
         </div>
         <!-- Responsive menu for mobile -->
-        <div class="md:hidden bg-gray-700" id="mobile-menu">
+        <div class="md:hidden bg-white" id="mobile-menu">
           <div class="px-2 py-3">
-            <a href="#" class="block text-white hover:text-gray-300 py-2 px-4">Home</a>
-            <a href="#" class="block text-white hover:text-gray-300 py-2 px-4">About me</a>
-            <a href="#" class="block text-white hover:text-gray-300 py-2 px-4">Works</a>
-            <a href="#" class="block text-white hover:text-gray-300 py-2 px-4">Contact</a>
-            <a href="#" class="block text-white hover:text-gray-300 py-2 px-4">Buy me coffee!</a>
+            <a href="#" class="block text-black hover:text-gray-700 py-2 px-4">Home</a>
+            <a href="#" class="block text-black hover:text-gray-700 py-2 px-4">About me</a>
+            <a href="#" class="block text-black hover:text-gray-700 py-2 px-4">Works</a>
+            <a href="#" class="block text-black hover:text-gray-700 py-2 px-4">Contact</a>
+            <a href="#" class="block text-black hover:text-gray-700 py-2 px-4">Buy me coffee!</a>
           </div>
         </div>
-      </nav>
-      
-      <script>
-        // JavaScript for mobile menu toggle
-        var mobileMenuButton = document.getElementById('mobile-menu-button');
-        var mobileMenu = document.getElementById('mobile-menu');
-      
-        mobileMenuButton.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
-        });
-      </script>
-      
-      
+    </nav>
+
+    <section class="bg-center bg-cover bg-no-repeat min-h-screen flex items-center py-20 relative hero-section" style="background-image: url(bgport.png);">
+        <div class="absolute inset-0 bg-opacity-70 bg-port"></div>
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center justify-center h-full">
+            <div class="md:w-1/2 flex justify-center">
+                <img src="pfp2.png" alt="Profile Picture" class="w-auto h-auto mt-0 transform hover:scale-105 transition-all duration-300">
+              </div>
+            <div class="md:w-1/2">
+              <h1 class="text-5xl lg:text-6xl text-white font-bold mb-6">Hi, I'm Divine!</h1>
+              <p class="text-lg lg:text-xl text-white mb-8 mr-8">Passionate Software Developer</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <script>
+      // JavaScript for mobile menu toggle
+      var mobileMenuButton = document.getElementById('mobile-menu-button');
+      var mobileMenu = document.getElementById('mobile-menu');
     
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
 </body>
 </html>
