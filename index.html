@@ -10,12 +10,19 @@
   <title>Your Portfolio</title>
   <style>
     body {
-      padding-top: 64px; /* Add top padding to create space for the fixed navbar */
-      font-family: 'Poppins', sans-serif; /* Apply the Poppins font to the entire body */
+      padding-top: 64px;
+      /* Add top padding to create space for the fixed navbar */
+      font-family: 'Poppins', sans-serif;
+      /* Apply the Poppins font to the entire body */
     }
 
     .hero-section {
-      margin-top: 0px; /* Add margin to push the section down */
+      margin-top: 0px;
+      /* Add margin to push the section down */
+    }
+
+    .hero-section h1 {
+      margin-bottom: 0;
     }
 
     /* Increase the z-index of the navbar */
@@ -27,32 +34,32 @@
 
 
 <body>
-  <nav class="bg-white shadow fixed top-0 left-0 right-0 navbar">
+  <nav class="bg-black shadow fixed top-0 left-0 right-0 navbar">
     <div class="container mx-auto px-16 py-2">
       <div class="flex items-center justify-between">
-        <a href="#" class="text-black font-bold text-xl">Your Logo</a>
+        <a href="#" class="text-white font-bold text-xl">Your Logo</a>
         <div class="md:hidden">
-          <button type="button" class="text-black hover:text-gray-800 focus:outline-none" id="mobile-menu-button">
+          <button type="button" class="text-white hover:text-gray-800 focus:outline-none" id="mobile-menu-button">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
         <div class="hidden md:flex md:items-center">
-          <a href="#" class="text-black hover:text-gray-300 px-4 py-2">Home</a>
-          <a href="#about" class="text-black hover:text-gray-300 px-4 py-2">About</a>
-          <a href="#projects" class="text-black hover:text-gray-300 px-4 py-2">Projects</a>
-          <a href="#contact" class="text-black hover:text-gray-300 px-4 py-2">Contact</a>
+          <a href="#" class="text-white hover:text-gray-300 px-4 py-2">Home</a>
+          <a href="#about" class="text-white hover:text-gray-300 px-4 py-2">About</a>
+          <a href="#projects" class="text-white  hover:text-gray-300 px-4 py-2">Projects</a>
+          <a href="#contact" class="text-white  hover:text-gray-300 px-4 py-2">Contact</a>
         </div>
       </div>
     </div>
     <!-- Mobile Menu -->
-    <div class="hidden bg-white md:hidden" id="mobile-menu">
+    <div class="hidden bg-black md:hidden" id="mobile-menu">
       <div class="px-2 py-3">
-        <a href="#" class="block text-black hover:text-gray-700 px-4 py-2">Home</a>
-        <a href="#about" class="block text-black hover:text-gray-700 px-4 py-2">About</a>
-        <a href="#projects" class="block text-black hover:text-gray-700 px-4 py-2">Projects</a>
-        <a href="#contact" class="block text-black hover:text-gray-700 px-4 py-2">Contact</a>
+        <a href="#" class="block text-white  hover:text-gray-700 px-4 py-2">Home</a>
+        <a href="#about" class="block text-white  hover:text-gray-700 px-4 py-2">About</a>
+        <a href="#projects" class="block text-white  hover:text-gray-700 px-4 py-2">Projects</a>
+        <a href="#contact" class="block text-white  hover:text-gray-700 px-4 py-2">Contact</a>
       </div>
     </div>
   </nav>
@@ -67,71 +74,93 @@
     });
   </script>
 
-
-
-  <!-- Hero Section -->
   <section class="bg-gray-200 py-5 hero-section" style="background-image: url('bgp.png'); background-size: cover;">
     <div class="container mx-auto px-14">
       <div class="flex flex-col md:flex-row items-center justify-center">
         <div class="md:w-1/2">
-          <h1 class="text-5xl lg:text-6xl text-white font-bold mb-4">Hi, I'm Divine!</h1>
-          <p class="text-md lg:text-lg text-white mb-6">As a passionate software developer, I bring innovative solutions to life. With expertise in various programming languages and frameworks, I thrive on turning complex problems into elegant and efficient code. I'm dedicated to continuous learning and staying up-to-date with the latest technologies to deliver high-quality software solutions. Let's collaborate and create something amazing together.</p>
+          <h1 id="animated-text" class="text-5xl lg:text-6xl text-blue-300 font-bold mb-0">Hi, I'm <span
+              id="typed-name"></span>!</h1>
+          <p class="text-md lg:text-lg text-white mb-8">As a passionate software developer, I bring innovative solutions
+            to life. With expertise in various programming languages and frameworks, I thrive on turning complex
+            problems into elegant and efficient code. I'm dedicated to continuous learning and staying up-to-date with
+            the latest technologies to deliver high-quality software solutions. Let's collaborate and create something
+            amazing together.</p>
           <a href="#" class="bg-blue-300 text-blue-950 px-6 py-2 rounded-sm shadow-md hover:bg-gray-800">Contact Me</a>
         </div>
         <div class="md:w-1/2 justify-center">
-          <img src="pfp3.png" alt="Profile Picture" class="w-auto h-auto mt-0 transform hover:scale-105 transition-all duration-300">
+          <img src="pfp22.png" alt="Profile Picture"
+            class="w-auto h-auto mt-0 transform hover:scale-105 transition-all duration-300">
         </div>
       </div>
     </div>
   </section>
 
- <section class="bg-gray-100 py-20" id="about">
-  <div class="container mx-auto px-10">
-    <h2 class="text-3xl text-center text-gray-800 font-bold mb-8">My Journey</h2>
-    <div class="flex items-center">
-      <div class="h-0.5 bg-gray-400 flex-grow"></div>
-      <div class="h-8 w-8 bg-gray-400 rounded-full flex items-center justify-center">
-        <div class="h-4 w-4 bg-white rounded-full"></div>
-      </div>
-      <div class="h-0.5 bg-gray-400 flex-grow"></div>
-    </div>
 
-    <!-- Educational Background -->
-    <div class="mt-12">
-      <h3 class="text-xl font-bold mb-4">Educational Background</h3>
-      <div class="flex flex-col md:flex-row w-full">
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4 md:mb-0 md:mr-4 flex-grow">
-          <p class="text-gray-800"><span class="font-bold">2015</span> - Bachelor's Degree</p>
-          <p class="text-gray-800">School Name</p>
-          <p class="text-gray-800">Computer Science</p>
+  <script>
+    const name = "Divine"; // Your name
+    const delay = 100; // Delay between each character (in milliseconds)
+    const typedName = document.getElementById('typed-name');
+    let index = 0;
+
+    function type() {
+      if (index < name.length) {
+        typedName.textContent += name.charAt(index);
+        index++;
+        setTimeout(type, delay);
+      }
+    }
+
+    type();
+  </script>
+
+
+  <section class="bg-black py-20" id="about">
+    <div class="container mx-auto px-10">
+      <h2 class="text-3xl text-center text-white font-bold mb-8">My Journey</h2>
+      <div class="flex items-center">
+        <div class="h-0.5 bg-gray-400 flex-grow"></div>
+        <div class="h-8 w-8 bg-gray-400 rounded-full flex items-center justify-center">
+          <div class="h-4 w-4 bg-white rounded-full"></div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4 md:mb-0 md:mr-4 flex-grow">
-          <p class="text-gray-800"><span class="font-bold">2017</span> - Master's Degree</p>
-          <p class="text-gray-800">School Name</p>
-          <p class="text-gray-800">Business Administration</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4 md:mb-0 flex-grow">
-          <p class="text-gray-800"><span class="font-bold">2020</span> - Diploma</p>
-          <p class="text-gray-800">School Name</p>
-          <p class="text-gray-800">Information Technology</p>
+        <div class="h-0.5 bg-gray-400 flex-grow"></div>
+      </div>
+
+      <!-- Educational Background -->
+      <div class="mt-12">
+        <h3 class="text-xl text-white font-bold mb-4">Educational Background</h3>
+        <div class="flex flex-col md:flex-row w-full">
+          <div class="bg-white p-6 rounded-lg shadow-md mb-4 md:mb-0 md:mr-4 flex-grow">
+            <p class="text-gray"><span class="font-bold">2015</span> - Bachelor's Degree</p>
+            <p class="text-gray-800">School Name</p>
+            <p class="text-gray-800">Computer Science</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md mb-4 md:mb-0 md:mr-4 flex-grow">
+            <p class="text-gray-800"><span class="font-bold">2017</span> - Master's Degree</p>
+            <p class="text-gray-800">School Name</p>
+            <p class="text-gray-800">Business Administration</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md mb-4 md:mb-0 flex-grow">
+            <p class="text-gray-800"><span class="font-bold">2020</span> - Diploma</p>
+            <p class="text-gray-800">School Name</p>
+            <p class="text-gray-800">Information Technology</p>
+          </div>
         </div>
       </div>
-    </div>
-      
-      
-  
+
+
+
       <!-- Experiences -->
       <div class="mt-12">
-        <h3 class="text-xl font-bold mb-4">Experiences</h3>
+        <h3 class="text-xl text-white font-bold mb-4">Experiences</h3>
         <div class="bg-white p-6 rounded-lg shadow-md">
           <p class="text-gray-800">Software Engineer at XYZ Company (2018 - Present)</p>
           <p class="text-gray-800">Web Developer at ABC Agency (2015 - 2018)</p>
         </div>
       </div>
-  
+
       <!-- Hobbies -->
       <div class="mt-12">
-        <h3 class="text-xl font-bold mb-4">Hobbies</h3>
+        <h3 class="text-xl text-white font-bold mb-4">Hobbies</h3>
         <div class="bg-white p-6 rounded-lg shadow-md">
           <p class="text-gray-800">Reading books</p>
           <p class="text-gray-800">Playing guitar</p>
@@ -140,7 +169,7 @@
       </div>
     </div>
   </section>
-  
+
 
   <!-- Projects Section -->
   <section class="bg-white py-20" id="projects" style="background-image: url('projbg.png'); background-size: cover;">
@@ -148,26 +177,32 @@
       <h2 class="text-3xl lg:text-4xl text-black font-bold mb-8 text-center">My Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Project Card 1 -->
-        <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:bg-gray-200 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+        <div
+          class="bg-gray-100 rounded-lg shadow-md p-6 hover:bg-gray-200 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
           <img src="PROJECT1.png" alt="Project 1" class="w-full mb-4">
           <h3 class="text-xl font-bold mb-2">Project 1</h3>
-          <p class="text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et ex nibh. Phasellus pellentesque nisl vitae risus semper egestas.</p>
+          <p class="text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et ex nibh.
+            Phasellus pellentesque nisl vitae risus semper egestas.</p>
           <a href="#" class="text-blue-500 hover:underline">Learn More</a>
         </div>
 
         <!-- Project Card 1 -->
-        <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:bg-gray-200 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+        <div
+          class="bg-gray-100 rounded-lg shadow-md p-6 hover:bg-gray-200 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
           <img src="PROJECT1.png" alt="Project 1" class="w-full mb-4">
           <h3 class="text-xl font-bold mb-2">Project 1</h3>
-          <p class="text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et ex nibh. Phasellus pellentesque nisl vitae risus semper egestas.</p>
+          <p class="text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et ex nibh.
+            Phasellus pellentesque nisl vitae risus semper egestas.</p>
           <a href="#" class="text-blue-500 hover:underline">Learn More</a>
         </div>
 
         <!-- Project Card 1 -->
-        <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:bg-gray-200 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+        <div
+          class="bg-gray-100 rounded-lg shadow-md p-6 hover:bg-gray-200 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
           <img src="PROJECT1.png" alt="Project 1" class="w-full mb-4">
           <h3 class="text-xl font-bold mb-2">Project 1</h3>
-          <p class="text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et ex nibh. Phasellus pellentesque nisl vitae risus semper egestas.</p>
+          <p class="text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et ex nibh.
+            Phasellus pellentesque nisl vitae risus semper egestas.</p>
           <a href="#" class="text-blue-500 hover:underline">Learn More</a>
         </div>
 
@@ -181,24 +216,28 @@
     <div class="container mx-auto px-4">
       <h2 class="text-3xl lg:text-4xl text-white font-bold mb-8 text-center">Contact Me</h2>
       <div class="max-w-md mx-auto">
-        <form>
+        <form action="send_email.php" method="post">
           <div class="mb-4">
             <label for="name" class="text-white">Name</label>
             <input type="text" id="name" name="name" class="block w-full px-4 py-2 rounded-md bg-gray-900 text-white">
           </div>
           <div class="mb-4">
             <label for="email" class="text-white">Email</label>
-            <input type="email" id="email" name="email" class="block w-full px-4 py-2 rounded-md bg-gray-900 text-white">
+            <input type="email" id="email" name="email"
+              class="block w-full px-4 py-2 rounded-md bg-gray-900 text-white">
           </div>
           <div class="mb-4">
             <label for="message" class="text-white">Message</label>
-            <textarea id="message" name="message" rows="4" class="block w-full px-4 py-2 rounded-md bg-gray-900 text-white"></textarea>
+            <textarea id="message" name="message" rows="4"
+              class="block w-full px-4 py-2 rounded-md bg-gray-900 text-white"></textarea>
           </div>
-          <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-600">Send Message</button>
+          <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-600">Send
+            Message</button>
         </form>
       </div>
     </div>
   </section>
+
 
   <!-- Footer -->
   <footer class="bg-gray-200 py-4">
@@ -207,4 +246,5 @@
     </div>
   </footer>
 </body>
+
 </html>
